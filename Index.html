@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+
+
+    <div class="hero-header">
+        <div class="rain-container" id="rain-container"></div>
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo de Gustavo Cerna" class="logo-img">
+                    <div class="logo-text">Gustavo Cerna</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a id="navInicio" href="#">Inicio</a></li>
+                        <li><a id="navSobreMi" href="#about">Sobre Mí</a></li>
+                        <li><a id="navProyectos" href="#projects">Proyectos</a></li>
+                        <li><a id="navProyectos" href="#premios">Premios</a></li>
+                        <li><a id="navProyectos" href="#testimonios">Testimonios</a></li>
+                        <li><a id="navProyectos" href="#intereses">Intereses</a></li>
+                        <li><a id="navProyectos" href="#contactame">Contactame</a></li>
+                        <li><button id="langBtn" style="margin-left:10px; padding:5px 10px; border-radius:5px; cursor:pointer;">EN</button></li>
+                    </ul>
+                </nav>
+            </header>
+            
+
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="images/image.png" alt="profile pic">
+                </div>
+                <div class="hero-text">
+                    <h5 id="holaSoy">Hola, Soy Desarrollador y QA Tester<span class="input"></span></h5>
+                    <h1>Gustavo Enrique Cerna Argueta</h1>
+                    <p id="descripcion1">Soy un estudiante de la Universidad Gerrardo Barrios de la carrera de Ingeniería en Sistema y Redes Informatica. A lo largo de mi carrera he aprendido distintos lenguajes de programación y el área de QA Tester.</p>
+                    <p id="frase">"En la vida todo es posible, si te lo propones"</p>
+                    <div class="btn-group">
+                        <a href="Curriculum _Gustavo_Cerna.pdf" download="Curriculum _Gustavo_Cerna.pdf" class="btn active" id="downloadBtn">Ver CV</a>
+
+                        <script>
+                        document.getElementById("downloadBtn").addEventListener("click", function(event) {
+                            event.preventDefault();
+                            const link = document.createElement('a');
+                            link.href = 'Curriculum _Gustavo_Cerna.pdf';
+                            link.download = 'Curriculum _Gustavo_Cerna.pdf';
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                        });
+                        </script>
+
+                        <a href="https://github.com/gustavocern" class="btn">GitHub</a>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/gustavo-enrique-cerna-argueta-43361b354/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sobre Mí -->
+    <section id="about" class="about-section">
+        <div class="wrapper">
+            <h2 id="tituloSobreMi">Sobre Mí</h2>
+            <p id="sobre1">Soy un apasionado QA Tester con conocimientos en pruebas manuales y automatizadas.</p>
+            <p id="sobre2">Me encanta garantizar la calidad del software y mejorar la experiencia del usuario mediante pruebas rigurosas.</p>
+            <p id="sobre3">En el área de Desarrollador Back-End he aprendido el manejo de algunos lenguajes de programación...</p>
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="images/image.png" alt="profile pic" width="150">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+
+    <!-- Proyectos -->
+     
+    <section id="projects" class="projects-section">
+        <div class="wrapper">
+            <h2 id="tituloProyectos">Proyectos</h2>
+            <div class="projects-grid">
+
+                <!-- Proyecto 1 -->
+                <div class="project-card">
+                    <div class="project-carousel" id="carousel1">
+                        <img src="images/proyecto1-1.jpeg" alt="Proyecto 1 Imagen 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>Proyecto Escandalo Boutique</h3>
+                        <p id="proyecto2Desc">Es un sistema con el cual tenian el control de entrada y salida de los empleados se mano HTML, CSS, Python, PHP y JavaScript, participe como Back-End.</p>
+                        <a href="https://github.com/Fernando-Jse/Proyecto.git" class="btn">GitHub Proyecto</a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="project-card">
+                    <div class="project-carousel" id="carousel2">
+                        <img src="images/proyecto2-1.jpeg" alt="Proyecto 2 Imagen 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>Proyecto Sistema bibliotecario</h3>
+                        <p id="proyecto1Desc">Sistema bibliotecario, es un sistema que cuenta con todas las nesecidades de una bliblioteca se trabajo con C# y MySQL, participe como Back-End</p>
+                        <a href="https://github.com/monicacampos1/Lectores-sin-rumbo" class="btn">GitHub Proyecto</a>  
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="project-card">
+                    <div class="project-carousel" id="carousel3">
+                        <img src="images/proyecto3-1.jpeg" alt="Proyecto 3 Imagen 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>Proyecto Shulton Parking</h3>
+                        <p id="proyecto3Desc">Sistema que facilitaba la busqueda de estacionamiento en el sector de usulutan usando PHP, MySQL, JavaScript y Json participe como QA Tester .</p>
+                        <a href="https://github.com/EmerLopez/shulton_parking.git" class="btn">GitHub Proyecto</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+    </section>
+
+    <script>
+        const rainContainer = document.getElementById('rain-container');
+    
+        function createRaindrop() {
+            const drop = document.createElement('div');
+            drop.classList.add('raindrop');
+            drop.style.left = Math.random() * window.innerWidth + 'px';
+            drop.style.animationDuration = (Math.random() * 1.5 + 0.5) + 's';
+            drop.style.animationDelay = Math.random() * 2 + 's';
+            rainContainer.appendChild(drop);
+    
+            // Elimina la gota después de caer
+            setTimeout(() => {
+                rainContainer.removeChild(drop);
+            }, 3000);
+        }
+    
+        // Genera gotas constantemente
+        setInterval(createRaindrop, 100);
+    </script>
+    
+
+    <!-- Carruseles -->
+    <script>
+        const images1 = ["images/proyecto1.jpeg", "images/proyecto1-2.jpeg", "images/proyecto1-3.jpeg"];
+        let index1 = 0;
+        setInterval(() => {
+            index1 = (index1 + 1) % images1.length;
+            document.querySelector("#carousel1 img").src = images1[index1];
+        }, 3000);
+
+        const images2 = ["images/proyecto2-1.jpeg", "images/proyecto2-2.jpeg", "images/proyecto2-3.jpeg"];
+        let index2 = 0;
+        setInterval(() => {
+            index2 = (index2 + 1) % images2.length;
+            document.querySelector("#carousel2 img").src = images2[index2];
+        }, 3000);
+
+        const images3 = ["images/proyecto3-1.jpeg", "images/proyecto3-2.jpeg", "images/proyecto3-3.jpeg"];
+        let index3 = 0;
+        setInterval(() => {
+            index3 = (index3 + 1) % images3.length;
+            document.querySelector("#carousel3 img").src = images3[index3];
+        }, 3000);
+    </script>
+
+<!-- Premios y Reconocimientos -->
+<section id="premios" class="awards-section">
+    <div class="wrapper">
+        <h2 id="tituloPremios">Premios y Reconocimientos</h2>
+        
+        <div class="award-item">
+            <img src="images/ntw.jpg" alt="Reconocimiento al Mérito Académico"  width="500">
+        <h3 id="premio1Titulo">1er lugar en Networking Challenge 2025</h3>
+    <p id="premio1Texto">Primer lugar en la competencia de desafio final Networking Challenge 2025.</p>
+</div>
+
+<div class="award-item">
+    <img src="images/segundolugar.png" alt="2do Lugar Desarrollo de Software" width="500">
+    <h3 id="premio2Titulo">2do Lugar - Desarrollo de Software</h3>
+    <p id="premio2Texto">Ganador del segundo lugar en la presentacion de Desarrollo de Software en el marco de la feria de logros informaticos y Automatización</p>
+</div>
+
+<div class="award-item">
+    <img src="images/inves.jpg" alt="Certificación Investigacion de Catedra" width="500">
+    <h3 id="premio3Titulo">Certificación en Investigacion de Catedra</h3>
+    <p id="premio3Texto">Certificado por su participacion enel desarrollo del concurso estudiantil de investigacion de Catedra 2024.</p>
+</div>
+    </div>
+</section>
+<!-- Testimonios -->
+<section id="testimonios" class="testimonials-section">
+    <div class="wrapper">
+        <h2 id="testimoniot">Testimonios</h2>
+
+        <div class="testimonial">
+            <p id="testi1">"Gustavo:
+En el tiempo que he compartido con Gustavo, he podido observar en él su capacidad de liderazgo y trabajo en equipo, ya que he tenido la oportunidad de convivir con su equipo de trabajo y ver la forma en la que logra integrarse no solo en un área, sino dando apoyo a sus compañeros, y aunque puede ser bastante centrado en sus objetivos, no tiene miedo de pedir ayuda cuando se necesita. En su tiempo como becado, lo he visto poner esto en práctica, siendo alguien que no tiene miedo a hablar y debatir para generar mejoras en los resultados de su trabajo."</p>
+            <h4>- ING. Cristina Fabiola Rivera Vargas</h4>
+        </div>
+
+        <div class="testimonial">
+            <p>"Demostró un gran compromiso con cada entrega, siempre dispuesto a aprender y mejorar. ¡Muy recomendado!"</p>
+            <h4>- Carlos Ramírez, Mentor en UGB Hackathon</h4>
+        </div>
+
+    </div>
+</section>
+<!-- Intereses -->
+ 
+<section id="intereses" class="interests-section">
+  <div class="wrapper">
+    <h2 id="inter">Intereses</h2>
+    <div class="interests-grid">
+      <div class="interest-card">
+        <i class="fas fa-vial"></i>
+        <h3>Automatización de pruebas</h3>
+      </div>
+      <div class="interest-card">
+        <i class="fas fa-code"></i>
+        <h3>Desarrollo web</h3>
+      </div>
+      <div class="interest-card">
+        <i class="fas fa-brain"></i>
+        <h3>Machine Learning</h3>
+      </div>
+      <div class="interest-card">
+        <i class="fas fa-code-branch"></i>
+        <h3>Open Source</h3>
+      </div>
+      <div class="interest-card">
+        <i class="fas fa-book"></i>
+        <h3>Lectura tecnológica</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Contáctame debajo del footer -->
+<section id="contactame">
+<section id="contact-form-section">
+    <div class="wrapper">
+        <h2 id="contactFormTitle">Contáctame</h2>
+        <form id="contactForm">
+            <label for="name" id="labelName">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email" id="labelEmail">Correo:</label>
+            <input type="email" id="emailInput" name="email" required>
+
+            <label for="message" id="labelMessage">Mensaje:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit" id="submitButton">Enviar</button>
+        </form>
+    </div>
+</section>
+</section>
+ <!-- Footer -->
+<footer>
+    <div class="wrapper">
+        <h1 id="contactoTitulo">Contacto</h1>
+        <p id="email">Email: <a href="mailto:gustavoargueta363@gmail.com">gustavoargueta363@gmail.com</a></p>
+        <p id="derechos">&copy; 2025 Gustavo Cerna. Todos los derechos reservados.</p>
+    </div>
+</footer>
+    <!-- Typed.js -->
+    <style>
+        #langBtn {
+            background: linear-gradient(135deg, #4f46e5, #3b82f6);
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+        
+        #langBtn:hover {
+            background: linear-gradient(135deg, #4338ca, #2563eb);
+            transform: scale(1.05);
+        }
+        
+        #langBtn:active {
+            transform: scale(0.95);
+        }
+        </style>
+       
+    <script>
+  const translations = {
+    es: {
+      navInicio: "Inicio",
+      navSobreMi: "Sobre Mí",
+      navProyectos: "Proyectos",
+      holaSoy: "Hola, Soy Desarrollador y QA Tester",
+      descripcion1: "Soy un estudiante de la Universidad Gerrardo Barrios de la carrera de Ingeniería en Sistema y Redes Informatica. A lo largo de mi carrera he aprendido distintos lenguajes de programación y el área de QA Tester.",
+      frase: "\"En la vida todo es posible, si te lo propones\"",
+      downloadBtn: "Ver CV",
+      tituloSobreMi: "Sobre Mí",
+      sobre1: "Soy un apasionado QA Tester con conocimientos en pruebas manuales y automatizadas.",
+      sobre2: "Me encanta garantizar la calidad del software y mejorar la experiencia del usuario mediante pruebas rigurosas.",
+      sobre3: "En el área de Desarrollador Back-End he aprendido el manejo de algunos lenguajes de programación...",
+      tituloProyectos: "Proyectos",
+      proyecto1Desc: "Sistema bibliotecario, es un sistema que cuenta con todas las nesecidades de una bliblioteca se trabajo con C# y MySQL, participe como Back-End",
+      proyecto2Desc: "Es un sistema con el cual tenian el control de entrada y salida de los empleados se mano HTML, CSS, Python, PHP y JavaScript, participe como Back-End.",
+      proyecto3Desc: "Sistema que facilitaba la busqueda de estacionamiento en el sector de usulutan usando PHP, MySQL, JavaScript y Json participe como QA Tester .",
+      tituloPremios: "Premios y Reconocimientos",
+      premio1Titulo: "1er lugar en Networking Challenge 2025",
+      premio1Texto: "Primer lugar en la competencia de desafio final Networking Challenge 2025.",
+      premio2Titulo: "2do Lugar - Desarrollo de Software",
+      premio2Texto: "Ganador del segundo lugar en la presentacion de Desarrollo de Software en el marco de la feria de logros informaticos y Automatización",
+      premio3Titulo: "Certificación en Investigacion de Catedra",
+      premio3Texto: "Certificado por su participacion enel desarrollo del concurso estudiantil de investigacion de Catedra 2024.",
+      testimoniot:"Testimonios",
+      contactFormTitle: "Contáctame",
+      labelName: "Nombre:",
+      labelEmail: "Correo:",
+      labelMessage: "Mensaje:",
+      submitButton: "Enviar",
+      contactoTitulo: "Contacto",
+      derechos: "&copy; 2025 Gustavo Cerna. Todos los derechos reservados.",
+    },
+    en: {
+      navInicio: "Home",
+      navSobreMi: "About Me",
+      navProyectos: "Projects",
+      holaSoy: "Hi, I'm Developer and QA Tester",
+      descripcion1: "I'm a student at Universidad Gerardo Barrios studying Systems and Network Engineering. Throughout my career, I have learned various programming languages and QA Testing.",
+      frase: "\"In life everything is possible if you put your mind to it\"",
+      downloadBtn: "View Resume",
+      tituloSobreMi: "About Me",
+      sobre1: "I am a passionate QA Tester with knowledge in manual and automated testing.",
+      sobre2: "I love ensuring software quality and improving user experience through rigorous testing.",
+      sobre3: "In the Back-End Developer area, I have learned to handle some programming languages...",
+      tituloProyectos: "Projects",
+      proyecto1Desc: "Library system that meets all library needs. Built with C# and MySQL. I participated as Back-End.",
+      proyecto2Desc: "A system that managed employee check-in and check-out. Built with HTML, CSS, Python, PHP, and JavaScript. I worked as Back-End.",
+      proyecto3Desc: "System that facilitated parking search in Usulután using PHP, MySQL, JavaScript, and JSON. I participated as QA Tester.",
+      tituloPremios: "Awards and Recognitions",
+      premio1Titulo: "1st Place in Networking Challenge 2025",
+      premio1Texto: "First place in the final challenge competition of Networking Challenge 2025.",
+      premio2Titulo: "2nd Place - Software Development",
+      premio2Texto: "Winner of second place in the Software Development presentation at the IT and Automation Achievement Fair.",
+      premio3Titulo: "Research Certification",
+      premio3Texto: "Certified for participation in the 2024 Student Research Competition.",
+      contactFormTitle: "Contact Me",
+      labelName: "Name:",
+      labelEmail: "Email:",
+      labelMessage: "Message:",
+      submitButton: "Send",
+      contactoTitulo: "Contact",
+      derechos: "&copy; 2025 Gustavo Cerna. All rights reserved.",
+    }
+  };
+
+  let currentLang = 'es';
+  let typed;
+
+  const langBtn = document.getElementById('langBtn');
+  langBtn.addEventListener('click', () => {
+    currentLang = currentLang === 'es' ? 'en' : 'es';
+    updateLanguage();
+    langBtn.innerText = currentLang === 'es' ? 'EN' : 'ES';
+  });
+
+  function updateLanguage() {
+    for (const key in translations[currentLang]) {
+      const el = document.getElementById(key);
+      if (el) {
+        el.innerHTML = translations[currentLang][key];
+      }
+    }
+
+    // Actualizar el texto animado
+    const palabras = currentLang === "es"
+      ? ["QA Tester", "Desarrollador", "Desarrollador Web"]
+      : ["QA Tester", "Developer", "Web Developer"];
+
+    if (typed) {
+      typed.destroy();
+    }
+
+    typed = new Typed(".input", {
+      strings: palabras,
+      typeSpeed: 70,
+      backSpeed: 55,
+      loop: true
+    });
+  }
+
+  // Inicializar idioma y animación
+  updateLanguage();
+</script>
+  <script>
+  const toggleBtn = document.querySelector(".togglebtn");
+  const navLinks = document.querySelector(".navlinks");
+
+  toggleBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+</body>
+</html>
