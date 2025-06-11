@@ -29,10 +29,10 @@
                         <li><a id="navInicio" href="#">Inicio</a></li>
                         <li><a id="navSobreMi" href="#about">Sobre Mí</a></li>
                         <li><a id="navProyectos" href="#projects">Proyectos</a></li>
-                        <li><a id="navProyectos" href="#premios">Premios</a></li>
-                        <li><a id="navProyectos" href="#testimonios">Testimonios</a></li>
-                        <li><a id="navProyectos" href="#intereses">Intereses</a></li>
-                        <li><a id="navProyectos" href="#contactame">Contactame</a></li>
+                        <li><a id="navPremios" href="#premios">Premios</a></li>
+                        <li><a id="navtestimonios" href="#testimonios">Testimonios</a></li>
+                        <li><a id="navintereses" href="#intereses">Intereses</a></li>
+                        <li><a id="navcontactame" href="#contactame">Contactame</a></li>
                         <li><button id="langBtn" style="margin-left:10px; padding:5px 10px; border-radius:5px; cursor:pointer;">EN</button></li>
                     </ul>
                 </nav>
@@ -186,28 +186,108 @@
 
 <!-- Premios y Reconocimientos -->
 <section id="premios" class="awards-section">
-    <div class="wrapper">
-        <h2 id="tituloPremios">Premios y Reconocimientos</h2>
-        
+  <div class="wrapper">
+    <h2 id="tituloPremios">Premios y Reconocimientos</h2>
+
+    <div class="carousel">
+      <div class="carousel-inner">
+        <div class="award-item active">
+          <img src="images/ntw.jpg" alt="Reconocimiento al Mérito Académico" width="500">
+          <h3 id="premio1Titulo">1er lugar en Networking Challenge 2025</h3>
+          <p id="premio1Texto">Primer lugar en la competencia de desafío final Networking Challenge 2025.</p>
+        </div>
+
         <div class="award-item">
-            <img src="images/ntw.jpg" alt="Reconocimiento al Mérito Académico"  width="500">
-        <h3 id="premio1Titulo">1er lugar en Networking Challenge 2025</h3>
-    <p id="premio1Texto">Primer lugar en la competencia de desafio final Networking Challenge 2025.</p>
-</div>
+          <img src="images/segundolugar.png" alt="2do Lugar Desarrollo de Software" width="500">
+          <h3 id="premio2Titulo">2do Lugar - Desarrollo de Software</h3>
+          <p id="premio2Texto">Ganador del segundo lugar en la presentación de Desarrollo de Software en la feria de logros informáticos y Automatización.</p>
+        </div>
 
-<div class="award-item">
-    <img src="images/segundolugar.png" alt="2do Lugar Desarrollo de Software" width="500">
-    <h3 id="premio2Titulo">2do Lugar - Desarrollo de Software</h3>
-    <p id="premio2Texto">Ganador del segundo lugar en la presentacion de Desarrollo de Software en el marco de la feria de logros informaticos y Automatización</p>
-</div>
+        <div class="award-item">
+          <img src="images/inves.jpg" alt="Certificación Investigación de Cátedra" width="500">
+          <h3 id="premio3Titulo">Certificación en Investigación de Cátedra</h3>
+          <p id="premio3Texto">Certificado por su participación en el desarrollo del concurso estudiantil de investigación de Cátedra 2024.</p>
+        </div>
+      </div>
 
-<div class="award-item">
-    <img src="images/inves.jpg" alt="Certificación Investigacion de Catedra" width="500">
-    <h3 id="premio3Titulo">Certificación en Investigacion de Catedra</h3>
-    <p id="premio3Texto">Certificado por su participacion enel desarrollo del concurso estudiantil de investigacion de Catedra 2024.</p>
-</div>
+      <button class="carousel-control prev" onclick="moveSlide(-1)">❮</button>
+      <button class="carousel-control next" onclick="moveSlide(1)">❯</button>
     </div>
+  </div>
 </section>
+
+<style>
+.awards-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+.carousel {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.award-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  display: none;
+  flex-shrink: 0;
+}
+
+.award-item.active {
+  display: block;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #007ced;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 2rem;
+  z-index: 1;
+}
+
+.carousel-control.prev {
+  left: 0;
+}
+
+.carousel-control.next {
+  right: 0;
+}
+</style>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.award-item');
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+  });
+}
+
+function moveSlide(step) {
+  currentSlide = (currentSlide + step + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Mostrar primer slide al cargar
+document.addEventListener('DOMContentLoaded', () => {
+  showSlide(currentSlide);
+});
+</script>
 <!-- Testimonios -->
 <section id="testimonios" class="testimonials-section">
     <div class="wrapper">
@@ -220,10 +300,44 @@ En el tiempo que he compartido con Gustavo, he podido observar en él su capacid
         </div>
 
         <div class="testimonial">
-            <p>"Demostró un gran compromiso con cada entrega, siempre dispuesto a aprender y mejorar. ¡Muy recomendado!"</p>
-            <h4>- Carlos Ramírez, Mentor en UGB Hackathon</h4>
+            <p>"He sido docente de Gustavo Enrique Cerna Argueta con código USSS108722,
+puedo asegurar que es una persona responsable, estudioso y buen compañero.
+Durante el tiempo que ha estado en la Universidad Gerardo Barrios Campus
+Usulután siempre ha mostrado un carácter colaborador, gran capacidad de
+trabajo y buena predisposición para trabajar en equipo."</p>
+            <h4>- Ing. Marvin Osmaro Parada Benitez</h4>
         </div>
 
+        <div class="testimonial">
+            <p>"Tengo un buen tiempo de conocer a Gustavo, siendo su guia dentro de la empresa CASS,
+En el cual he podido acompañarlo en su formación como estudiante y en la aplicación de todos sus conocimientos adquirido,
+Conociendolo bien como un gran Profesional en el Area de QA durante el tiempo que esta trabajando,
+Es una persona aplicada y responsable el cual siempre se empeña en dejar las cosas muy bien ejecutadas,
+Ya en lo personal lo considero un gran amigo, con el cual reimos y sobre todo sabemos trabajar en Equipo."</p>
+            <h4>- Ing. Brayan Wilfredo Lemus Vasquez</h4>
+        </div>
+
+        <div class="testimonial">
+            <img src="images/torres.jpg"  >
+            <h4> Lic. Máster. Oscar Roberto Torres Rodrígue</h4>
+        </div>
+
+        <div class="testimonial">
+            <img src="images/alcir.jpg"  >
+            <h4> Ing. Ms. Alcir Gustavo Quintanilla Rodríguez </h4>
+        </div>
+
+         <div class="testimonial">
+            <img src="images/marcela.jpg"  >
+            <h4> ING. Kathia Marcela Berrios Ascencio </h4>
+        </div>
+
+         <div class="testimonial">
+            <img src="images/cordero.png"  >
+            <h4> Lic. Ms. Herbert René Cordero Henriquez</h4>
+        </div>
+
+        
     </div>
 </section>
 <!-- Intereses -->
@@ -317,6 +431,10 @@ En el tiempo que he compartido con Gustavo, he podido observar en él su capacid
       navInicio: "Inicio",
       navSobreMi: "Sobre Mí",
       navProyectos: "Proyectos",
+      navPremios:"Premios",
+      navtestimonios:"Testimonios",
+      navintereses:"Intereses",
+      navcontactame:"contactame",
       holaSoy: "Hola, Soy Desarrollador y QA Tester",
       descripcion1: "Soy un estudiante de la Universidad Gerrardo Barrios de la carrera de Ingeniería en Sistema y Redes Informatica. A lo largo de mi carrera he aprendido distintos lenguajes de programación y el área de QA Tester.",
       frase: "\"En la vida todo es posible, si te lo propones\"",
@@ -337,6 +455,7 @@ En el tiempo que he compartido con Gustavo, he podido observar en él su capacid
       premio3Titulo: "Certificación en Investigacion de Catedra",
       premio3Texto: "Certificado por su participacion enel desarrollo del concurso estudiantil de investigacion de Catedra 2024.",
       testimoniot:"Testimonios",
+      testi1:"Gustavo: En el tiempo que he compartido con Gustavo, he podido observar en él su capacidad de liderazgo y trabajo en equipo, ya que he tenido la oportunidad de convivir con su equipo de trabajo y ver la forma en la que logra integrarse no solo en un área, sino dando apoyo a sus compañeros, y aunque puede ser bastante centrado en sus objetivos, no tiene miedo de pedir ayuda cuando se necesita. En su tiempo como becado, lo he visto poner esto en práctica, siendo alguien que no tiene miedo a hablar y debatir para generar mejoras en los resultados de su trabajo.",
       contactFormTitle: "Contáctame",
       labelName: "Nombre:",
       labelEmail: "Correo:",
